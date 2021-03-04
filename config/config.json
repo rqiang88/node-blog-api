@@ -1,0 +1,29 @@
+{
+  "development": {
+    "dialect": "mysql",
+    "define": {
+      "charset": "utf8mb4"
+    },
+    "pool": {
+      "max": 10
+    }
+  },
+  "test": {
+    "dialect": "mysql",
+    "define": {
+      "charset": "utf8mb4"
+    },
+    "pool": {
+      "max": 10
+    }
+  },
+  "production": {
+    "dialect": "mysql",
+    "define": {
+      "charset": "utf8mb4"
+    },
+    "pool": {
+      "max": 10
+    }
+  }
+}
