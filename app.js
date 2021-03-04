@@ -3,6 +3,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
+var dotenv = require('dotenv');
 var cors = require('cors');
 var initRouter = require('./routes');
 var app = express();
@@ -18,6 +19,7 @@ app.use(session({
   saveUninitialized: true,
 }));
 app.use(cors());
+dotenv.config();
 
 initRouter(app);
 
