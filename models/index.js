@@ -12,11 +12,7 @@ let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-  let databaseConfig = {
-    ...config,
-    host: process.env.DATABASE || '127.0.0.1'
-  }
-  sequelize = new Sequelize(process.env.DATABASE, process.env.USERNAME, process.env.PASSWORD, databaseConfig);
+  sequelize = new Sequelize(config.database, process.env.USERNAME, process.env.PASSWORD, config);
 }
 
 fs
